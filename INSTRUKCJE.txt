@@ -1,0 +1,6 @@
+Interpreter pliku z premiami znajduje się w pliku „kadry\Pages\Main\Import.xaml.cs”
+w metodzie o nazwie „WczytajInterpretujPlik”, będącej ostatnią metodą w tym pliku.
+Zwraca ona listę premii, każda z nich zawiera 3 informacje:
+•	Kod/Akronim pracownika (Pracownik)
+•	Kwota premii (Kwota)
+•	Nazwisko pracownika (Nazwisko) [opcjonalne]

@@ -1,0 +1,44 @@
+﻿<Page x:Class="kadry.Pages.Main.Menu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:kadry.Pages.Main"
+      mc:Ignorable="d"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Menu">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"  VerticalAlignment="Center" >
+            <StackPanel Orientation="Horizontal">
+                <Button Style="{StaticResource MainButtonStyle}" Content="Wczytaj plik" x:Name="LoadFile" Height="30" Width="150" Margin="3,1" Click="LoadFile_Click"/>
+
+                <Border Background="White" Margin="6" CornerRadius="3" BorderThickness="1" BorderBrush="{StaticResource BorderBrush}">
+                    <TextBlock Margin="6" Background="Transparent" Width="300"><Run x:Name="LoadedFile" Text=""/></TextBlock>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" >
+                <Button Style="{StaticResource MainButtonStyle}" x:Name="ChSkType" Width="150" Click="ChSkType_Click" Margin="3,1" Height="30" Content="Zmień typ składnika"/>
+                <Border Background="White" Margin="6" CornerRadius="3" BorderThickness="1" BorderBrush="{StaticResource BorderBrush}">
+                    <TextBlock Margin="6" Width="300"><Run x:Name="SkTypeText" Text=""/></TextBlock>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Style="{StaticResource MainButtonStyle}" x:Name="ChList" Width="150" Click="ChList_Click" Margin="3,1" Height="30" Content="Zmień listę płac"/>
+                <Border Background="White" Margin="6" CornerRadius="3" BorderThickness="1" BorderBrush="{StaticResource BorderBrush}">
+                    <TextBlock Margin="6" Width="300"><Run x:Name="LstPlac" Text=""/></TextBlock>
+                </Border>
+            </StackPanel>
+
+            <Grid>
+                <Button Style="{StaticResource MainButtonStyle}" IsEnabled="False" Height="50" Width="50" HorizontalAlignment="Right" x:Name="Start" Click="Start_Click" Margin="5">
+                    <Path Style="{StaticResource ApplyPath}"/>
+                </Button>
+
+                <Button Style="{StaticResource MainButtonStyle}" x:Name="Cancel" Click="Cancel_Click" Margin="5,5,60,5" HorizontalAlignment="Right" Height="50" Width="50">
+                    <Path Style="{StaticResource CancelPath}"/>
+                </Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>

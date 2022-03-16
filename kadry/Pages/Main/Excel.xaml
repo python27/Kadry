@@ -1,0 +1,37 @@
+﻿<Page x:Class="kadry.Pages.Main.Excel"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kadry.Pages.Main"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Excel">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"  VerticalAlignment="Center" >
+            <StackPanel Orientation="Horizontal">
+                <Button Style="{StaticResource MainButtonStyle}" Content="Kwota" Height="30" Width="150" Margin="3,1"/>
+                <ComboBox x:Name="comboBoxKwota" Margin="10" Background="Transparent" Width="300" Height="30" DropDownClosed="ComboBoxKwota_DropDownClosed"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" >
+                <Button Style="{StaticResource MainButtonStyle}" x:Name="ChSkType" Width="150" Margin="3,1" Height="30" Content="Pracownik"/>
+                <ComboBox x:Name="comboBoxPracownik" Margin="10" Background="Transparent" Width="300" Height="30" DropDownClosed="ComboBoxPracownik_DropDownClosed"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Style="{StaticResource MainButtonStyle}" x:Name="ChList" Width="150" Margin="3,1" Height="30" Content="Nazwisko"/>
+                <ComboBox x:Name="comboBoxNazwisko" Margin="10" Background="Transparent" Width="300" Height="30" DropDownClosed="ComboBoxNazwisko_DropDownClosed"/>
+            </StackPanel>
+
+            <Grid>
+                <Button Style="{StaticResource MainButtonStyle}" IsEnabled="False" Height="50" Width="50" HorizontalAlignment="Right" x:Name="Start" Click="Start_Click" Margin="5">
+                    <Path Style="{StaticResource ApplyPath}"/>
+                </Button>
+
+                <Button Style="{StaticResource MainButtonStyle}" x:Name="Cancel" Click="Cancel_Click" Margin="5,5,60,5" HorizontalAlignment="Right" Height="50" Width="50">
+                    <Path Style="{StaticResource CancelPath}"/>
+                </Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>

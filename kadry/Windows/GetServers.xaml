@@ -1,0 +1,34 @@
+﻿<Window x:Class="kadry.Windows.GetServers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kadry.Windows"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Background="{StaticResource BackgroundBrush}"
+        WindowStartupLocation="CenterScreen"
+        Title="GetServers" Height="450" Width="350">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <ListBox Background="{StaticResource BackgroundBrush}" FontSize="15" x:Name="ServerList" SelectionChanged="ServerList_SelectionChanged" SelectionMode="Single" HorizontalAlignment="Stretch" Grid.ColumnSpan="2" VerticalAlignment="Stretch">
+        </ListBox>
+
+        <Button IsCancel="True" Style="{StaticResource MainButtonStyle}" Grid.Row="2"  Grid.Column="2" Width="50" HorizontalAlignment="Right" Margin="5,5,60,5">
+            <Path Style="{StaticResource CancelPath}"/>
+        </Button>
+        <Button x:Name="SelectServer" Style="{StaticResource MainButtonStyle}" IsEnabled="False" HorizontalAlignment="Right" Width="50" Height="50" Grid.Row="2" Grid.Column="1" Margin="5" Click="SelectServer_Click">
+            <Path Style="{StaticResource ApplyPath}"/>
+        </Button>
+
+        <TextBlock x:Name="LoadingText" Grid.ColumnSpan="2" FontSize="17" Text="Wczytywanie serwerów" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+    </Grid>
+</Window>
