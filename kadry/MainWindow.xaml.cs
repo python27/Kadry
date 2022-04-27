@@ -33,11 +33,11 @@ namespace kadry
             InitializeComponent();
 
 
-
             LogoImg.Source = BitmapToImgSource(Resource1.Computernet);
 
 
             Data.BaseDir = AppDomain.CurrentDomain.BaseDirectory;
+
 
             //CheckUpdate();
 
