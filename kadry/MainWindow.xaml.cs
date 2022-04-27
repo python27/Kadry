@@ -33,6 +33,7 @@ namespace kadry
             InitializeComponent();
 
 
+
             LogoImg.Source = BitmapToImgSource(Resource1.Computernet);
 
 
