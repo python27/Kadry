@@ -1,1 +1,1 @@
-using System.Globalization; using System; namespace kadry { public static class DateStamp { public readonly static string Build = "2022-03-16_17-29-23"; public readonly static System.DateTime BuildTime2 = Convert.ToDateTime(("2022-03-16 17:29:23")); } }
+using System.Globalization; using System; namespace kadry { public static class DateStamp { public readonly static string Build = "2022-04-27_20-51-19"; public readonly static System.DateTime BuildTime2 = Convert.ToDateTime(("2022-04-27 20:51:19")); } }
